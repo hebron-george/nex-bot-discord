@@ -12,7 +12,7 @@ bot = Discordrb::Commands::CommandBot.new token: ENV['BOT_TOKEN'], client_id: EN
 # puts "This bot's invite URL is #{bot.invite_url}."
 # puts 'Click on it to invite it to your server.'
 
-bot.command :ping do |_event|
+bot.command :ping do |event|
   "Pong! Back at ya #{event.message.authoer.username}"
 end
 
