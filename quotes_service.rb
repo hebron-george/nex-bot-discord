@@ -17,10 +17,7 @@ module QuotesService
   end
 
   def self.find_quote(keyword)
-    puts "Searching for keyword: #{keyword}"
-    returned_body = client.post('find-quote') { |req| req.params = {keyword: keyword} }.body
-    puts "Returned body for keyword #{keyword.inspect}:\n\t\t#{returned_body}"
-    JSON.parse(returned_body)
+    JSON.parse(client.post('find-quote') { |req| req.params = {keyword: keyword} }.body)
   end
 
   def self.client
