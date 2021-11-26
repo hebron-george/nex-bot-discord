@@ -57,6 +57,7 @@ class Presenter
   def saved_at
     tz = TZInfo::Timezone.get('America/New_York')
     s = message['saved_at']
-    s == 'N/A' ? 'N/A' : tz.to_local(DateTime.parse(s)).strftime('%Y-%m-%d %H:%M:%S %p %Z')
+    date_time_format = '%b %d, %Y %I:%M %p %Z'
+    s == 'N/A' ? 'N/A' : tz.to_local(DateTime.parse(s)).strftime(date_time_format)
   end
 end
