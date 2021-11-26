@@ -11,9 +11,7 @@ bot.command :ping do |event|
 end
 
 bot.command :quote do |_event, search_string|
-  result = QuotesService.find_quote(search_string)
-  message = result.dig('data', 'quote')
-  return "> #{message}"
+  QuotesService.find_quote(search_string)
 end
 
 bot.command :addquote do |event, *quote|
