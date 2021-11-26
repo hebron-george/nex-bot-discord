@@ -45,12 +45,10 @@ class Presenter
 
   def empty_quote
     {
-      'data': {
-        'author':   'N/A',
-        'saved_at': 'N/A',
-        'channel':  'N/A',
-        'message':  'No quotes found.',
-      }
+      'author'   => 'N/A',
+      'saved_at' => 'N/A',
+      'channel'  => 'N/A',
+      'message'  => 'No quotes found.',
     }
   end
 
